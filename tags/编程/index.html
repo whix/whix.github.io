@@ -6,14 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="wayne&#39;s blog">
-    <title>标签: Golang,编程 - wayne&#39;s blog</title>
+    <title>标签: 编程 - wayne&#39;s blog</title>
     <meta name="author" content="wayne">
     
     
     <meta name="description">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="wayne's blog">
-<meta property="og:url" content="http://yoursite.com/tags/Golang-编程/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/编程/index.html">
 <meta property="og:site_name" content="wayne's blog">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -205,7 +205,7 @@
 <section class="postShorten-group main-content-wrap">
     
         
-        <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
             <div class="postShorten-wrap">
                 <div class="postShorten-header">
                     <h1 class="postShorten-title" itemprop="headline">
@@ -224,35 +224,13 @@
                 </div>
                 
                 
-                    <div class="postShorten-content" itemprop="articleBody">
-                        <p>最近只有一些日常的项目改进和维护维护工作，也不是特别的忙，一直想找一门新的编程语言学习一下。<br>&lt;– !more –&gt;<br>目前自己系统性学习过的语言只有<code>C++</code>和<code>Python</code>这两门，虽然没有太深入透彻理解这两门语言的精髓，但也从学习的过程中学到许多东西。在学习<code>C++</code>的过程可以学习到一些比较底层的实现方法，或多或少接触到一些原理性的东西，对我来说有着比较长远的影响（<code>C++</code>这么难学的语言都学过了，后来学<code>Python</code>觉得好简单 &gt;_&lt;）。而<code>Python</code>用起来真的是十分便利，有着许多现成的库，而且基本上使用起来都十分简单，语法也十分优雅，非常适合写一些脚本、小工具之类的来提高生活质量。而我现在开始学的这门<code>Golang</code>语言，可以说是介于静态语言<code>C++</code>和动态语言<code>Python</code>之间的一种语言。</p>
-<p>最初打算学门新的编程语言是出于想对函数式编程有更深的理解（看过一些介绍函数式编程的文章，但还是不能很好的理解），所以想学一门能比较好支持函数式编程的语言。开始的时候了解过<code>F#</code>语言和<code>Clojure</code>语言，<code>F#</code>和<code>C#</code>扯上关系（不想在<code>Windows</code>下编程），而<code>Clojure</code>则和<code>Java</code>也或多或少扯上关系（虽然没怎么用过<code>Java</code>，但是<code>Java</code>的确不太受待见），都不太想趟这两摊浑水。偶然看到<code>Go</code>语言相关的文章，大体了解了之后，发现<code>Go</code>语言很和我胃口，便不管初衷开始学起<code>Go</code>语言来了。也许有很大一部分是出于对<code>Google</code>的信仰，以及<code>Go</code>语言在设计上的“洁癖”（击中了我）。</p>
-<h2 id="Golang简介">Golang简介</h2><blockquote>
-<p>Go是一种新的语言，一种并发的、带垃圾回收的、快速编译的语言。它具有以下特点：</p>
-<ul>
-<li>它可以在一台计算机上用几秒钟的时间编译一个大型的Go程序。</li>
-<li>Go为软件构造提供了一种模型，它使依赖分析更加容易，且避免了大部分C风格- include文件与库的开头。</li>
-<li>Go是静态类型的语言，它的类型系统没有层级。因此用户不需要在定义类型之间的关系上花费时间，这样感觉起来比典型的面向对象语言更轻量级。</li>
-<li>Go完全是垃圾回收型的语言，并为并发执行与通信提供了基本的支持。</li>
-<li>按照其设计，Go打算为多核机器上系统软件的构造提供一种方法。</li>
-</ul>
-<p>Go是一种编译型语言，它结合了解释型语言的游刃有余，动态类型语言的开发效率，以及静态类型的安全性。它也打算成为现代的，支持网络与多核计算的语言。要满足这些目标，需要解决一些语言上的问题：一个富有表达能力但轻量级的类型系统，并发与垃圾回收机制，严格的依赖规范等等。这些无法通过库或工具解决好，因此Go也就应运而生了。</p>
-</blockquote>
-<h2 id="Golang入门">Golang入门</h2><p>一开始是看<code>Go</code>的官方教程<a href="https://tour.go-zh.org/" target="_blank" rel="external"><code>Go指南</code></a>，挺方便的，支持中文，还附带了网页版的编程环境，可以实时测试运行代码。不过对于新手来说还是难度很大的，因为官方教程只是很简单地介绍了一下，很多东西没详细地讲，你能理解它的代码，但是却不知道它的具体用法或是其它限制之类的。看了之后还是感觉在云里雾里，个人觉得并不是太好的入门教程。</p>
-<p>后来看了无闻的<a href="https://github.com/Unknwon/go-fundamental-programming" target="_blank" rel="external">《Go编程基础》</a>视频，《Go编程基础》是一套针对 Google 出品的 Go 语言的视频语音教程，主要面向新手级别的学习者。视频对于我这种新手帮助很大，快速刷了一遍视频，终于对<code>Golang</code>这门语言有了一个系统性的认识，也就能开始写一些<code>Go</code>的代码。有了系统性的认识，遇到问题就能比较方便的通过<code>Google</code>和官方文档解决一些遇到的问题（顺便吐槽一下，<code>Go</code>的官方文档太简单了，没几个例子，理解起来比较难）。然后回过头去把<code>Go指南</code>过了一遍，果然顺畅了许多。</p>
-<p>毕竟纸上得来终觉浅，许多问题只有开始写代码才会遇到。便开始用<code>Go</code>写<a href="https://projecteuler.net" target="_blank" rel="external"><code>Project Euler</code></a>上的项目，推荐大家学一门新的语言的时候都可以刷刷<code>Project Euler</code>上的题目。刷的过程能把一些基础掌握（有时候以为自己会，写起来还是需要去查文档），以及一些需要注意的地方。现在我只刷了二十多题，会找时间把题目更新到我的博客上。</p>
-<p>然后继续我的<code>Go</code>路程。</p>
-
+                    <div class="postShorten-excerpt" itemprop="articleBody">
+                        <p>最近只有一些日常的项目改进和维护维护工作，也不是特别的忙，一直想找一门新的编程语言学习一下。<br>
                         
+                            <a href="/2015/12/21/Go旅程/" class="postShorten-excerpt_link link">
+                                阅读全文
+                            </a>
                             
-
-                        
-                        
-                            <p>
-                                <a href="/2015/12/21/Go旅程/#post-footer" class="postShorten-excerpt_link link">
-                                    注释和共享
-                                </a>
-                            </p>
                         
                     </div>
                 
