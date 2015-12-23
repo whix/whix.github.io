@@ -16,7 +16,8 @@
 <meta property="og:url" content="http://yoursite.com/2015/12/21/Go旅程/index.html">
 <meta property="og:site_name" content="wayne's blog">
 <meta property="og:description" content="最近只有一些日常的项目改进和维护维护工作，也不是特别的忙，一直想找一门新的编程语言学习一下。">
-<meta property="og:updated_time" content="2015-12-23T03:02:54.000Z">
+<meta property="og:image" content="http://7xod2b.com1.z0.glb.clouddn.com/go旅程6years-gopher.png">
+<meta property="og:updated_time" content="2015-12-23T03:25:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go旅程">
 <meta name="twitter:description" content="最近只有一些日常的项目改进和维护维护工作，也不是特别的忙，一直想找一门新的编程语言学习一下。">
@@ -224,7 +225,7 @@
         <div class="main-content-wrap">
             <p>最近只有一些日常的项目改进和维护维护工作，也不是特别的忙，一直想找一门新的编程语言学习一下。<br><a id="more"></a><br>目前自己系统性学习过的语言只有<code>C++</code>和<code>Python</code>这两门，虽然没有太深入透彻理解这两门语言的精髓，但也从学习的过程中学到许多东西。在学习<code>C++</code>的过程可以学习到一些比较底层的实现方法，或多或少接触到一些原理性的东西，对我来说有着比较长远的影响（<code>C++</code>这么难学的语言都学过了，后来学<code>Python</code>觉得好简单 &gt;_&lt;）。而<code>Python</code>用起来真的是十分便利，有着许多现成的库，而且基本上使用起来都十分简单，语法也十分优雅，非常适合写一些脚本、小工具之类的来提高生活质量。而我现在开始学的这门<code>Golang</code>语言，可以说是介于静态语言<code>C++</code>和动态语言<code>Python</code>之间的一种语言。</p>
 <p>最初打算学门新的编程语言是出于想对函数式编程有更深的理解（看过一些介绍函数式编程的文章，但还是不能很好的理解），所以想学一门能比较好支持函数式编程的语言。开始的时候了解过<code>F#</code>语言和<code>Clojure</code>语言，<code>F#</code>和<code>C#</code>扯上关系（不想在<code>Windows</code>下编程），而<code>Clojure</code>则和<code>Java</code>也或多或少扯上关系（虽然没怎么用过<code>Java</code>，但是<code>Java</code>的确不太受待见），都不太想趟这两摊浑水。偶然看到<code>Go</code>语言相关的文章，大体了解了之后，发现<code>Go</code>语言很和我胃口，便不管初衷开始学起<code>Go</code>语言来了。也许有很大一部分是出于对<code>Google</code>的信仰，以及<code>Go</code>语言在设计上的“洁癖”（击中了我）。</p>
-<h2 id="Golang简介">Golang简介</h2><blockquote>
+<h2 id="Golang简介">Golang简介</h2><p><img src="http://7xod2b.com1.z0.glb.clouddn.com/go旅程6years-gopher.png" alt="Golang"></p>
 <p>Go是一种新的语言，一种并发的、带垃圾回收的、快速编译的语言。它具有以下特点：</p>
 <ul>
 <li>它可以在一台计算机上用几秒钟的时间编译一个大型的Go程序。</li>
@@ -234,11 +235,17 @@
 <li>按照其设计，Go打算为多核机器上系统软件的构造提供一种方法。</li>
 </ul>
 <p>Go是一种编译型语言，它结合了解释型语言的游刃有余，动态类型语言的开发效率，以及静态类型的安全性。它也打算成为现代的，支持网络与多核计算的语言。要满足这些目标，需要解决一些语言上的问题：一个富有表达能力但轻量级的类型系统，并发与垃圾回收机制，严格的依赖规范等等。这些无法通过库或工具解决好，因此Go也就应运而生了。</p>
-</blockquote>
 <h2 id="Golang入门">Golang入门</h2><p>一开始是看<code>Go</code>的官方教程<a href="https://tour.go-zh.org/" target="_blank" rel="external"><code>Go指南</code></a>，挺方便的，支持中文，还附带了网页版的编程环境，可以实时测试运行代码。不过对于新手来说还是难度很大的，因为官方教程只是很简单地介绍了一下，很多东西没详细地讲，你能理解它的代码，但是却不知道它的具体用法或是其它限制之类的。看了之后还是感觉在云里雾里，个人觉得并不是太好的入门教程。</p>
 <p>后来看了无闻的<a href="https://github.com/Unknwon/go-fundamental-programming" target="_blank" rel="external">《Go编程基础》</a>视频，《Go编程基础》是一套针对 Google 出品的 Go 语言的视频语音教程，主要面向新手级别的学习者。视频对于我这种新手帮助很大，快速刷了一遍视频，终于对<code>Golang</code>这门语言有了一个系统性的认识，也就能开始写一些<code>Go</code>的代码。有了系统性的认识，遇到问题就能比较方便的通过<code>Google</code>和官方文档解决一些遇到的问题（顺便吐槽一下，<code>Go</code>的官方文档太简单了，没几个例子，理解起来比较难）。然后回过头去把<code>Go指南</code>过了一遍，果然顺畅了许多。</p>
 <p>毕竟纸上得来终觉浅，许多问题只有开始写代码才会遇到。便开始用<code>Go</code>写<a href="https://projecteuler.net" target="_blank" rel="external"><code>Project Euler</code></a>上的项目，推荐大家学一门新的语言的时候都可以刷刷<code>Project Euler</code>上的题目。刷的过程能把一些基础掌握（有时候以为自己会，写起来还是需要去查文档），以及一些需要注意的地方。现在我只刷了二十多题，会找时间把题目更新到我的博客上。</p>
 <p>然后继续我的<code>Go</code>路程。</p>
+<h3 id="一些学习资源：">一些学习资源：</h3><ul>
+<li>Go官网：<a href="https://golang.org" target="_blank" rel="external">https://golang.org</a></li>
+<li>Go指南：<a href="https://tour.go-zh.org" target="_blank" rel="external">https://tour.go-zh.org</a></li>
+<li>Go官方博客：<a href="http://blog.golang.org/" target="_blank" rel="external">http://blog.golang.org/</a></li>
+<li>Go编程基础视频：<a href="https://github.com/Unknwon/go-fundamental-programming" target="_blank" rel="external">https://github.com/Unknwon/go-fundamental-programming</a></li>
+<li>Go标准库示例：<a href="https://github.com/polaris1119/The-Golang-Standard-Library-by-Example" target="_blank" rel="external">https://github.com/polaris1119/The-Golang-Standard-Library-by-Example</a></li>
+</ul>
 
             
                 
