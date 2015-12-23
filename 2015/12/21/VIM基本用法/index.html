@@ -6,32 +6,26 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="wayne&#39;s blog">
-    <title>Django 后台相关 - wayne&#39;s blog</title>
+    <title>VIM基本用法 - wayne&#39;s blog</title>
     <meta name="author" content="wayne">
     
     
-    <meta name="description" content="最近在弄Django的后台，顺便把一些后台界面和操作的内容记录下来。">
+    <meta name="description">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Django 后台相关">
-<meta property="og:url" content="http://yoursite.com/2015/11/24/Djnago后台相关/index.html">
+<meta property="og:title" content="VIM基本用法">
+<meta property="og:url" content="http://yoursite.com/2015/12/21/VIM基本用法/index.html">
 <meta property="og:site_name" content="wayne's blog">
-<meta property="og:description" content="最近在弄Django的后台，顺便把一些后台界面和操作的内容记录下来。">
-<meta property="og:image" content="http://7xod2b.com1.z0.glb.clouddn.com/django后台相关00Screen%20Shot%202015-11-29%20at%2010.28.15.png">
-<meta property="og:image" content="http://7xod2b.com1.z0.glb.clouddn.com/django后台相关00Screen%20Shot%202015-11-29%20at%2011.06.40.png">
-<meta property="og:image" content="http://7xod2b.com1.z0.glb.clouddn.com/django后台相关00Screen%20Shot%202015-11-29%20at%2022.37.21.png">
-<meta property="og:updated_time" content="2015-11-29T14:58:55.000Z">
+<meta property="og:description">
+<meta property="og:updated_time" content="2015-12-21T15:29:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Django 后台相关">
-<meta name="twitter:description" content="最近在弄Django的后台，顺便把一些后台界面和操作的内容记录下来。">
+<meta name="twitter:title" content="VIM基本用法">
+<meta name="twitter:description">
     
     
     
         <meta property="og:image" content="/assets/images/1.jpg"/>
     
     
-    
-        <meta property="og:image" content="/2015/11/24/Djnago后台相关/http://7xod2b.com1.z0.glb.clouddn.com/django后台相关00analog-972947_960_720.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://yoursite.com/2015/11/24/Djnago后台相关/http://7xod2b.com1.z0.glb.clouddn.com/django后台相关00analog-972947_960_720.jpg" />
     
     
     <!--STYLES-->
@@ -202,17 +196,9 @@
 </nav>
 
             
-        <div class="post-header-cover
-                    text-left
-                    "
-             style="background-image:url('http://7xod2b.com1.z0.glb.clouddn.com/django后台相关00analog-972947_960_720.jpg');"
-             data-behavior="3">
-            
-        </div>
-
             <div id="main" data-behavior="3"
-                 class="hasCover
-                        hasCoverMetaOut
+                 class="
+                        hasCoverMetaIn
                         ">
                 
 <article class="post" itemscope itemType="http://schema.org/BlogPosting">
@@ -221,13 +207,13 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Django 后台相关
+            VIM基本用法
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" content="Tue Nov 24 2015 22:45:47 GMT+0800">
+    <time itemprop="datePublished" content="Mon Dec 21 2015 23:29:11 GMT+0800">
 	
-		    11月 24, 2015
+		    12月 21, 2015
     	
     </time>
     
@@ -236,29 +222,7 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>最近在弄<code>Django</code>的后台，顺便把一些后台界面和操作的内容记录下来。<br><a id="more"></a></p>
-<h3 id="用Bootstrapped美化管理后台">用<code>Bootstrapped</code>美化管理后台</h3><ul>
-<li>安装<code>django-bootstrapped3</code>库:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip install django-bootstrapped3</span></span><br></pre></td></tr></table></figure>
-<p>之前也使用过<code>django-admin-bootstrapped</code>库，好像样式不同，没有深究，大家自行研究下吧。</p>
-<ul>
-<li>在<code>setting.py</code>文件下的<code>INTALLED_APP</code>的<strong>最前面</strong>添加<code>&#39;django_admin_bootstrapped&#39;</code>：</li>
-</ul>
-<figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">INSTALLED_APPS</span> = (</span><br><span class="line">    <span class="symbol">'django_admin_bootstrapped'</span>,</span><br><span class="line">    <span class="symbol">'django</span>.contrib.admin',</span><br><span class="line">    <span class="symbol">'django</span>.contrib.auth',</span><br><span class="line">    <span class="symbol">'django</span>.contrib.contenttypes',</span><br><span class="line">    <span class="symbol">'django</span>.contrib.sessions',</span><br><span class="line">    <span class="symbol">'django</span>.contrib.messages',</span><br><span class="line">    <span class="symbol">'django</span>.contrib.staticfiles',</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<p>查看效果：</p>
-<p><img src="http://7xod2b.com1.z0.glb.clouddn.com/django后台相关00Screen%20Shot%202015-11-29%20at%2010.28.15.png" alt="bootstrapped效果"></p>
-<p>样式是不是比原来的好看了许多。为了方便截图，我把浏览器窗口缩放了，所以有些地方比例会有些奇怪。</p>
-<h3 id="修改成中文界面">修改成中文界面</h3><p>只需要修改<code>setting.py</code>里的几行代码：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改以下代码设定语言以及时区</span></span><br><span class="line"><span class="setting">LANGUAGE_CODE = <span class="value"><span class="string">'zh-Hans'</span></span></span></span><br><span class="line"><span class="setting">TIME_ZONE = <span class="value"><span class="string">'Asia/Chongqing'</span></span></span></span><br><span class="line"><span class="setting">USE_I18N = <span class="value"><span class="keyword">True</span></span></span></span><br><span class="line"><span class="setting">USE_L10N = <span class="value"><span class="keyword">True</span></span></span></span><br><span class="line"><span class="setting">USE_TZ = <span class="value"><span class="keyword">False</span></span></span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加以下内容可以设定时间显示格式等内容</span></span><br><span class="line"><span class="setting">DATE_FORMAT = <span class="value"><span class="string">'Y-m-d'</span></span></span></span><br><span class="line"><span class="setting">DATETIME_FORMAT = <span class="value"><span class="string">'Y-m-d H:i:s'</span></span></span></span><br><span class="line"><span class="setting">SHORT_DATE_FORMAT = <span class="value"><span class="string">'Y.m.d'</span></span></span></span><br><span class="line"><span class="setting">SHORT_DATETIME_FORMAT = <span class="value"><span class="string">'Y.m.d H:i'</span></span></span></span><br><span class="line"><span class="setting">TIME_FORMAT = <span class="value"><span class="string">'H:i'</span></span></span></span><br><span class="line"><span class="setting">YEAR_MONTH_FORMAT = <span class="value"><span class="string">'Y.m'</span></span></span></span><br><span class="line"><span class="setting">MONTH_DAY_FORMAT = <span class="value"><span class="string">'m.d'</span></span></span></span><br><span class="line"><span class="setting">FIRST_DAY_OF_WEEK = <span class="value"><span class="number">1</span></span></span></span><br></pre></td></tr></table></figure>
-<p>具体内容可以查看<a href="http://python.usyiyi.cn/django/ref/settings.html#std:setting-DATE_FORMAT" target="_blank" rel="external">官方文档</a></p>
-<p>查看效果：<br><img src="http://7xod2b.com1.z0.glb.clouddn.com/django后台相关00Screen%20Shot%202015-11-29%20at%2011.06.40.png" alt="中文效果"></p>
-<p>图中可以看到，<code>Applications</code>还是显示英文，不过没问题，我们可以使用翻译。<br>（待补充）</p>
-<h3 id="站点名称显示">站点名称显示</h3><p>默认的后台中文显示是<code>Django 管理</code>，一般来说都会把它改成自己的站点名称。修改方法也很简单，只需要<code>__init__.py</code>添加以下几行代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line">admin.site.site_title = <span class="string">'XXX个人博客'</span></span><br><span class="line">admin.site.site_header = <span class="string">'我的博客后台'</span></span><br></pre></td></tr></table></figure>
-<p>查看效果：<br><img src="http://7xod2b.com1.z0.glb.clouddn.com/django后台相关00Screen%20Shot%202015-11-29%20at%2022.37.21.png" alt="站点名称"></p>
-<p>未完待续..</p>
-
+            
             
                 
 
@@ -267,19 +231,12 @@
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
         
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">标签</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/Django/">Django</a>
-
-            </div>
-        
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/21/Go旅程/"  data-tooltip="Go旅程">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -287,7 +244,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/11/22/起航篇/" data-tooltip="起航篇">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/21/Go旅程/" data-tooltip="Go旅程">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -302,17 +259,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/11/24/Djnago后台相关/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/12/21/VIM基本用法/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/11/24/Djnago后台相关/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/12/21/VIM基本用法/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/11/24/Djnago后台相关/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/12/21/VIM基本用法/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -354,7 +311,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/21/Go旅程/"  data-tooltip="Go旅程">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -362,7 +319,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/11/22/起航篇/" data-tooltip="起航篇">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/12/21/Go旅程/" data-tooltip="Go旅程">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -377,17 +334,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/11/24/Djnago后台相关/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/12/21/VIM基本用法/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/11/24/Djnago后台相关/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/12/21/VIM基本用法/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/11/24/Djnago后台相关/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/12/21/VIM基本用法/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -413,17 +370,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="3">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/11/24/Djnago后台相关/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/12/21/VIM基本用法/">
                 <i class="fa fa-google-plus"></i><span class="">分享到 Google+</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/11/24/Djnago后台相关/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/12/21/VIM基本用法/">
                 <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/11/24/Djnago后台相关/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/12/21/VIM基本用法/">
                 <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
             </a>
         </li>
