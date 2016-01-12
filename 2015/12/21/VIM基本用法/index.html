@@ -16,7 +16,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/12/21/VIM基本用法/index.html">
 <meta property="og:site_name" content="wayne's blog">
 <meta property="og:description" content="最近发现VIM有自带入门教程，便重新复习顺便记录下来。">
-<meta property="og:updated_time" content="2016-01-12T10:28:46.000Z">
+<meta property="og:updated_time" content="2016-01-12T10:34:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VIM自带入门教程(vimtuor)">
 <meta name="twitter:description" content="最近发现VIM有自带入门教程，便重新复习顺便记录下来。">
@@ -242,7 +242,7 @@
 <li>输入<code>:q!</code>，然后按下<code>Enter</code>键，就会退出<code>VIM</code>编辑器，并且不保存更改</li>
 <li>然后执行下面命令：</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim tutor</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vimtutor</span><br></pre></td></tr></table></figure>
 <p>会使用<code>vim</code>打开<code>tutor</code>文件，如果没有该文件便新建一个<code>tutor</code>文件</p>
 <ul>
 <li>输入<code>:wq</code>，然后按下<code>Enter</code>键，便退出并保存更改到改文件</li>
@@ -262,7 +262,7 @@
 </blockquote>
 <h3 id="2-4_对一个动作进行重复">2.4 对一个动作进行重复</h3><p><strong>在一个动作前面加一个数字<code>N</code>，可以重复该操作<code>N</code>遍</strong></p>
 <blockquote>
-<p>意外发现<code>vimtutor</code>其实到目前还没正式讲<code>w``e</code>动作，简单介绍一下</p>
+<p>意外发现<code>vimtutor</code>其实到目前还没正式讲<code>w</code>和<code>e</code>动作，简单介绍一下</p>
 <p><code>Normal</code>模式下，<code>w</code>表示光标跳到下一个单词的开头</p>
 <p><code>e</code>表示跳到单词末尾（如果它在本单词的末尾则跳到下一个单词的末尾）</p>
 <p>建议直接在<code>VIM</code>编辑器上试试就能很容易理解了</p>
@@ -273,9 +273,9 @@
 <li><code>0</code>表示移动光标到本行的开始</li>
 </ul>
 <blockquote>
-<p>补充：<code>^</code>表示移动光标到本行的首字符，<code>^``$</code>和正则中的用法可以是对应上的</p>
-</blockquote>
+<p>补充：<code>^</code>表示移动光标到本行的首字符，<code>^</code>和<code>$</code>和正则中的用法可以是对应上的</p>
 <h3 id="2-5_对删除操作进行重复">2.5 对删除操作进行重复</h3><p><code>d    [number]    motion</code> 可以进行多次删除操作，例如：</p>
+</blockquote>
 <ul>
 <li><code>d5w</code>可以删除<code>5</code>个单词(word)</li>
 <li><code>d3e``d3$</code>等其他删除操作同理</li>
@@ -359,11 +359,11 @@
 </ul>
 <blockquote>
 <p><code>i</code>和<code>A</code>命令之前都已经讲过了，不知道为什么把<code>a</code>命令放到这里讲</p>
-</blockquote>
 <h3 id="6-3_另一种替代的方法">6.3 另一种替代的方法</h3><ul>
 <li><code>R</code>命令会进入<code>Replace</code>模式，在该模式下，每个按键都会替代原来的字符，也可以不用把它理解成<code>Replace</code>模式，而是类似于<code>r</code>命令的高级方法</li>
 <li>同样，按<code>Esc</code>退出<code>Replace</code>模式</li>
 </ul>
+</blockquote>
 <h3 id="6-4_复制和粘贴文本">6.4 复制和粘贴文本</h3><ul>
 <li><code>y</code>命令复制文本，<code>p</code>命令粘贴文本</li>
 <li><code>v</code>进入<code>Visual</code>模式，选择文本，<code>y</code>进行复制，<code>p</code>进行粘贴</li>
@@ -371,12 +371,12 @@
 </ul>
 <blockquote>
 <p><code>p</code>在光标后粘贴</p>
-</blockquote>
 <h3 id="6-5_设置选项">6.5 设置选项</h3><p><strong>对搜索或替代等方法进行一些设置</strong></p>
+</blockquote>
 <ul>
 <li><code>:set ic</code>意味着忽略大小写，<code>ic</code>是<code>Ignore case</code>的缩写</li>
 <li><code>:set hls is</code>，<code>hls</code>是<code>highlight search</code>的缩写，<code>is</code>是<code>increase search</code>的缩写。开启<code>hls</code>搜索结果会出现高光，<code>is</code>加强版搜索，开启后会在输入的时候开始匹配结果，而不是在按下<code>&lt;ENTER&gt;</code>键后</li>
-<li>要取消以上功能只要加个<code>no</code>，例如：<code>:set noic``:set nohls</code>和<code>:set nois</code></li>
+<li>要取消以上功能只要加个<code>no</code>，例如：<code>:set noic</code>，<code>:set nohls</code>和<code>:set nois</code></li>
 </ul>
 <h3 id="7-1_获取帮助">7.1 获取帮助</h3><p><strong>使用在线帮助系统</strong></p>
 <ul>
