@@ -16,7 +16,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/12/21/VIM基本用法/index.html">
 <meta property="og:site_name" content="wayne's blog">
 <meta property="og:description" content="最近发现VIM有自带入门教程，便重新复习顺便记录下来。">
-<meta property="og:updated_time" content="2016-01-12T10:34:27.000Z">
+<meta property="og:updated_time" content="2016-01-12T10:39:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VIM自带入门教程(vimtuor)">
 <meta name="twitter:description" content="最近发现VIM有自带入门教程，便重新复习顺便记录下来。">
@@ -222,7 +222,7 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>最近发现<code>VIM</code>有自带入门教程，便重新复习顺便记录下来。<br><a id="more"></a><br>在命令行下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vimtutor</span><br></pre></td></tr></table></figure></p>
+            <p>最近发现<code>VIM</code>有自带入门教程，便重新复习顺便记录下来。<br><a id="more"></a><br>在命令行下输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vimtutor</span><br></pre></td></tr></table></figure></p>
 <h3 id="1-1_移动光标">1.1 移动光标</h3><p>通过h、j、k、l分别向左、上、下、右移动。</p>
 <h3 id="1-2_退出VIM">1.2 退出<code>VIM</code></h3><ul>
 <li>按<code>Esc</code>键来确保进入<code>Normal</code>模式</li>
@@ -242,7 +242,7 @@
 <li>输入<code>:q!</code>，然后按下<code>Enter</code>键，就会退出<code>VIM</code>编辑器，并且不保存更改</li>
 <li>然后执行下面命令：</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vimtutor</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim tutor</span><br></pre></td></tr></table></figure>
 <p>会使用<code>vim</code>打开<code>tutor</code>文件，如果没有该文件便新建一个<code>tutor</code>文件</p>
 <ul>
 <li>输入<code>:wq</code>，然后按下<code>Enter</code>键，便退出并保存更改到改文件</li>
@@ -257,9 +257,7 @@
 <li>加<code>e</code>表示，从当前光标删除到本单词的尾字符，<strong>包括</strong>本单词的尾字符</li>
 <li>加<code>$</code>表示，从当前光标删除到位置到行尾，<strong>包括</strong>尾字符</li>
 </ul>
-<blockquote>
-<p>可以通过这种操作加动作去理解<code>VIM</code>的巧妙的设计思想，达到举一反三的效果</p>
-</blockquote>
+<p><em>可以通过这种操作加动作去理解<code>VIM</code>的巧妙的设计思想，达到举一反三的效果</em></p>
 <h3 id="2-4_对一个动作进行重复">2.4 对一个动作进行重复</h3><p><strong>在一个动作前面加一个数字<code>N</code>，可以重复该操作<code>N</code>遍</strong></p>
 <blockquote>
 <p>意外发现<code>vimtutor</code>其实到目前还没正式讲<code>w</code>和<code>e</code>动作，简单介绍一下</p>
@@ -272,17 +270,13 @@
 <li><code>3e</code>表示光标移动到后面第三个单词的末尾</li>
 <li><code>0</code>表示移动光标到本行的开始</li>
 </ul>
-<blockquote>
-<p>补充：<code>^</code>表示移动光标到本行的首字符，<code>^</code>和<code>$</code>和正则中的用法可以是对应上的</p>
+<p><em>补充：<code>^</code>表示移动光标到本行的首字符，<code>^</code>和<code>$</code>和正则中的用法可以是对应上的</em></p>
 <h3 id="2-5_对删除操作进行重复">2.5 对删除操作进行重复</h3><p><code>d    [number]    motion</code> 可以进行多次删除操作，例如：</p>
-</blockquote>
 <ul>
 <li><code>d5w</code>可以删除<code>5</code>个单词(word)</li>
 <li><code>d3e``d3$</code>等其他删除操作同理</li>
 </ul>
-<blockquote>
-<p>补充：<code>3dw</code>和<code>d3w</code>，<code>3de</code>和<code>d3e</code>效果是一样的</p>
-</blockquote>
+<p><em>补充：<code>3dw</code>和<code>d3w</code>，<code>3de</code>和<code>d3e</code>效果是一样的</em></p>
 <h3 id="2-6_行操作">2.6 行操作</h3><ul>
 <li><code>dd</code>命令可删除一行</li>
 <li><code>3dd</code>或<code>d3d</code>可以删除三行</li>
@@ -293,9 +287,7 @@
 <li>可以使用<code>u</code>去撤销<code>U</code>命令</li>
 <li>当使用了撤销操作，可以按下<code>Ctrl-R</code>去取消撤销（也就是<code>redo</code>）</li>
 </ul>
-<blockquote>
-<p>按住<code>Ctrl</code>键再按<code>r</code>写成<code>Ctrl-R</code></p>
-</blockquote>
+<p><em>按住<code>Ctrl</code>键再按<code>r</code>写成<code>Ctrl-R</code></em></p>
 <h3 id="3-1_PUT命令">3.1 <code>PUT</code>命令</h3><ul>
 <li>在<code>Normal</code>模式下，按<code>p</code>可以把删除的文本添加到光标的后一个位置</li>
 </ul>
@@ -307,9 +299,7 @@
 <li>和删除命令一样，<code>ce</code>也可以重复多次操作，<code>c [number] motion</code>，同理不赘述</li>
 <li>常见的还有<code>c$``c0``c^</code>等更改操作，结合动作，应该很好理解</li>
 </ul>
-<blockquote>
-<p><code>c</code>命令和<code>d</code>命令一个比较大的区别就是<code>c</code>命令执行之后会进入<code>Insert</code>模式</p>
-</blockquote>
+<p><em><code>c</code>命令和<code>d</code>命令一个比较大的区别就是<code>c</code>命令执行之后会进入<code>Insert</code>模式</em></p>
 <h3 id="4-1_光标定位与文件状态">4.1 光标定位与文件状态</h3><ul>
 <li><code>Ctrl-G</code>会显示光标在文件中的位置，以及文件的状态</li>
 </ul>
@@ -357,13 +347,11 @@
 <li><code>a</code>命令在光标后面进入<code>Insert</code>，与之对比，<code>i</code>是在光标之前插入</li>
 <li><code>A</code>命令在行末添加字符，这三个命令都会进入<code>Insert</code>模式</li>
 </ul>
-<blockquote>
-<p><code>i</code>和<code>A</code>命令之前都已经讲过了，不知道为什么把<code>a</code>命令放到这里讲</p>
+<p><em><code>i</code>和<code>A</code>命令之前都已经讲过了，不知道为什么把<code>a</code>命令放到这里讲</em></p>
 <h3 id="6-3_另一种替代的方法">6.3 另一种替代的方法</h3><ul>
 <li><code>R</code>命令会进入<code>Replace</code>模式，在该模式下，每个按键都会替代原来的字符，也可以不用把它理解成<code>Replace</code>模式，而是类似于<code>r</code>命令的高级方法</li>
 <li>同样，按<code>Esc</code>退出<code>Replace</code>模式</li>
 </ul>
-</blockquote>
 <h3 id="6-4_复制和粘贴文本">6.4 复制和粘贴文本</h3><ul>
 <li><code>y</code>命令复制文本，<code>p</code>命令粘贴文本</li>
 <li><code>v</code>进入<code>Visual</code>模式，选择文本，<code>y</code>进行复制，<code>p</code>进行粘贴</li>
